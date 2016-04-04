@@ -1,0 +1,58 @@
+
+
+<div style="width: 500px; height: 500px; top: 50%; left: 50%; margin: -250px 0px 0px -250px; position: fixed">
+    
+    <div style="width: 500px; height: 500px; top: 35%; left: 50%; margin: -250px 0px 0px -250px; position: fixed; text-align: middle">
+        <div id="lotto" style="font-size: 20px; color: green; display:table-cell; width:500px; height:500px; text-align:center; vertical-align: middle">
+        
+            <% for i in 0..6 do %>
+            <%= @number[i] %>
+            <% end %>
+
+        </div>
+    </div>
+    
+
+    <div id="book" style="top: 20%; left: 50%; margin: -100px 0px 0px -100px; position: relative"><%= image_tag @count_img %></div> 
+    <div id="book2" style="top: 20%; left: 10%; margin: -100px 0px 0px -175px; position: absolute"><%= image_tag @door_img %></div>
+    
+    
+    
+
+
+    <div style="position: fixed; margin-top: 100px; text-align: center; width:500px; height:500px; top: 40%">
+    
+        <h1 >040916 로또 추첨기</h1>
+        <p>행운을 잡으세요!<br><br><br></p>
+        <a id="clickme"class="btn btn-primary btn-lg active" role="button">추첨시작</a>
+        <a href="https://grape-1-alkago.c9users.io" class="btn btn-default btn-lg active" role="button">다시하기</a>
+    
+    </div>    
+</div>
+
+    <embed id="bgm" src="//www.youtube.com/v/LkfFGkM71L0?version=2&autoplay=1&loop=1" hidden="true" loop="777" type="application/x-shockwave-flash" wmode="opaque"></embed>
+
+
+ 
+<script>
+
+$( "#clickme" ).click(function() {
+  $( "#book" ).fadeOut(2500 , function() {
+
+  });
+});
+
+$( "#clickme" ).click(function() {
+  $( "#book2" ).fadeOut(10 , function() {
+
+  });
+});
+
+$( "#clickme" ).click(function() {
+  $( "#bgm" ).fadeIn(10 , function() {
+
+  });
+});
+
+
+</script>

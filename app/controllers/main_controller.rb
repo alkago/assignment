@@ -1,7 +1,8 @@
 class MainController < ApplicationController
     def menu
         
-        @number = (1..45).to_a.sample(6).sort
+        @number = *(1..45)
+        @numbers = @number.sample(7).sort
         
         @door = ["main"]
         @door_bridge = @door.sample
@@ -14,3 +15,7 @@ class MainController < ApplicationController
         
     end
 end
+
+@numbers =  *('1'..'45')
+        @sixnumber = @numbers.sample(7)        
+       
